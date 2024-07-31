@@ -6,7 +6,7 @@ def my_flow(name: str = "World"):
 
 if __name__ == "__main__":
     my_flow.from_source(
-        source="...",
+        source="https://github.com/daniel-prefect/pacc.git",
         entrypoint="deploy.py:my_flow",
     ).deploy(
         name="pacc_deployment",
