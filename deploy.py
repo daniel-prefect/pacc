@@ -1,8 +1,9 @@
 from prefect import flow
+import os
 
 @flow(log_prints=True)
 def my_flow(name: str = "World"):
-    print(f"Hello, {name}!")
+    print(f"Hello, {os.environ["MY_ENV_VAR"]}!")
 
 if __name__ == "__main__":
     my_flow.from_source(
